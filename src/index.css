@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Russo One', sans-serif;
+    --font-tech: 'Chakra Petch', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-tech {
+  font-family: var(--font-tech);
+}
+
+/* CRT Scanlines */
+.crt-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.4) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Red Neon Glows */
+.neon-glow-red {
+  text-shadow: 0 0 8px rgba(239, 68, 68, 0.8), 0 0 20px rgba(220, 38, 38, 0.6);
+}
+
+.neon-glow-amber {
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.8), 0 0 20px rgba(217, 119, 6, 0.6);
+}
+
+.neon-border-red {
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.35), inset 0 0 15px rgba(239, 68, 68, 0.15);
+}
+
+.neon-border-active {
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.7), inset 0 0 20px rgba(239, 68, 68, 0.3);
+}
+
+/* Cyber grid background */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 0, 50, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 0, 50, 0.05) 1px, transparent 1px);
+}
+
+/* Dossier Stamp */
+.stamp-classified {
+  transform: rotate(-7deg);
+  border: 4px dashed #ef4444;
+  color: #ef4444;
+  text-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+}
+
+.stamp-rejected {
+  transform: rotate(5deg);
+  border: 4px solid #dc2626;
+  color: #dc2626;
+  text-shadow: 0 0 12px rgba(220, 38, 38, 0.9);
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090d;
+}
+::-webkit-scrollbar-thumb {
+  background: #3f1010;
+  border-radius: 4px;
+  border: 1px solid #7f1d1d;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+/* Radar ping */
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-radar {
+  animation: radar-sweep 4s linear infinite;
+}
+
+/* Screen glitch flash */
+@keyframes flash-red {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 0.85; }
+}
+
+.flash-red-active {
+  animation: flash-red 0.4s ease-out;
+}

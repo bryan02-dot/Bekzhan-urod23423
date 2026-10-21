@@ -1,0 +1,6 @@
+{
+  "name": "BEKZHAN.EXE — Секретное Досье №666",
+  "description": "Секретное расследование спецслужб по делу Бекжана: 5 лет без прав, газовая угроза, подкаблучник года, кымызные обещания и эпичный финальный босс.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
